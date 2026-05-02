@@ -12,6 +12,8 @@ node_modules
 coverage
 dist
 dist-ssr
+cdk.out
+cdk-outputs.json
 *.local
 
 # Editor directories and files

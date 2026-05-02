@@ -29,6 +29,30 @@ Builds the project for production in `dist` folder.
 
 Starts the project in production mode on local environment.
 
+### `cdk:bootstrap`
+
+Bootstraps the target AWS account and region for CDK assets. Run once before the first deployment:
+
+```bash
+npm run cdk:bootstrap
+```
+
+### `deploy`, `cdk:deploy`, `deploy:frontend`
+
+Builds the app into `dist`, deploys the CDK stack, uploads `dist` to the private S3 bucket, and invalidates the CloudFront cache.
+
+```bash
+npm run deploy
+```
+
+`npm run cdk:deploy` is an alias for the same deployment flow.
+
+The deployed CloudFront URL, distribution id, and S3 bucket name are printed as CDK outputs and saved to `cdk-outputs.json`.
+
+### `destroy:frontend`
+
+Destroys the frontend CDK stack and the deployment bucket created for static assets.
+
 ### `test`, `test:ui`, `test:coverage`
 
 Runs tests in console, in browser or with coverage.
